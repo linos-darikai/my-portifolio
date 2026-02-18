@@ -322,8 +322,7 @@ img{
     border: 0;
     border-left: 2px solid #233554;
     text-align: left;
-    padding-left: 20px;
-    white-space: nowrap;   
+    padding-left: 20px;  
     cursor: pointer;
 
 }

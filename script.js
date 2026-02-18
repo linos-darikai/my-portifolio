@@ -16,7 +16,7 @@ let contentArray = [`
 </div>
 `,`
 <h1>Software Engineer <a target="_blank" rel="noopener noreferrer" href="https://www.developforgood.org/" style="color: #00f5d4;">@ Develop for Good</a></h1>
-<p>October 2025 – Present</p>
+<p>October 2025 – February 2026</p>
 <div>
   <ul>
     <li class="r-points">Collaborating with a team of 6 engineers, designers, and PMs to develop a web platform for Pain USA.</li>
@@ -48,7 +48,8 @@ let contentArray = [`
 </div>
 `];
 
-let projectArray = [`<div class="Project">                
+let projectArray = [`
+<div class="Project">                
     <div class="project-inner">
         <header>
             <div class="project-top">
@@ -60,22 +61,78 @@ let projectArray = [`<div class="Project">
                     <i class="ph-thin ph-arrow-square-out color-grey" style="font-size: 30px;"></i>                               
                 </div>                 
             </div>
-
-            <h3 class="project-title">Hog Game Simulator</h3>
+            <h3 class="project-title">Inventory Management System</h3>
             <div class="project-description">
-                <span>Simulates the Hog dice game with AI strategies, a GUI interface, and game logic based on the CS61A project.</span>
+                <span>Developed an Inventory Management App using Python's Tkinter for the GUI and CSV files for data persistence, enabling users to add, update, delete, and view inventory items efficiently.</span>
             </div>
         </header>
         <footer>
             <ul class="project-tech-stack">
                 <li>Python</li>
-                <li>GUI</li>
-                <li>CS61A</li>
+                <li>Tkinter</li>
+                <li>SQLite</li>
             </ul>
         </footer>
     </div>
 </div>
-`, `<div class="Project">                
+`,`
+<div class="Project">                
+    <div class="project-inner">
+        <header>
+            <div class="project-top">
+                <div class="folder">
+                    <i class="ph-light ph-folder-simple color-green" style="font-size: 50px;"></i>
+                </div>
+                <div class="project-links">
+                    <i class="ph-light ph-github-logo color-grey" style="font-size: 30px;"></i>
+                    <i class="ph-thin ph-arrow-square-out color-grey" style="font-size: 30px;"></i>                               
+                </div>                 
+            </div>
+            <h3 class="project-title">Unbeatable Tic-Tac-Toe AI</h3>
+            <div class="project-description">
+                <span>Developed a Q-learning-based Tic-Tac-Toe AI that learns optimal strategies through gameplay, utilizing Q-values, exploration vs exploitation, and a rewards structure, with a graphical interface in Tkinter and persistent Q-table storage in CSV files.</span>
+            </div>
+        </header>
+        <footer>
+            <ul class="project-tech-stack">
+                <li>Python</li>
+                <li>Tkinter</li>
+                <li>Q-learning</li>
+            </ul>
+        </footer>
+    </div>
+</div>
+`,`
+    <div class="Project">                
+        <div class="project-inner">
+            <header>
+                <div class="project-top">
+                    <div class="folder">
+                        <i class="ph-light ph-folder-simple color-green" style="font-size: 50px;"></i>
+                    </div>
+                    <div class="project-links">
+                        <i class="ph-light ph-github-logo color-grey" style="font-size: 30px;"></i>
+                        <i class="ph-thin ph-arrow-square-out color-grey" style="font-size: 30px;"></i>                               
+                    </div>                 
+                </div>
+
+                <h3 class="project-title">Trading Algorithm using Fuzzy Logic</h3><!--put link to github or project details-->
+                <div class="project-description">
+                    <span>Developing a stock trading algorithm based on fuzzy logic to predict market trends and make automated trading decisions, visualized with Flask and HTML</span>
+                </div>
+            </header>
+            <footer>
+                <ul class="project-tech-stack">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Flask</li>
+                </ul>
+            </footer>
+        </div>
+    </div>`
+    , `
+    <div class="Project">                
     <div class="project-inner">
         <header>
             <div class="project-top">
