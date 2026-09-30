@@ -1,0 +1,136 @@
+{
+    "githubUser": "linos-darikai",
+    "siteUrl": "https://linosdarikai.com",
+
+    "hidden": [
+        "my-portifolio",
+        "linos-darikai.github.io",
+        "linos-darikai",
+        "Avalance546"
+    ],
+
+    "order": [
+        "gereza",
+        "beeply",
+        "grtn_2026",
+        "sika",
+        "AUPS_Rocket_Shuttle",
+        "TradingAlgo",
+        "agent_TikTakToe",
+        "Twitter_Sentimental_Map",
+        "presentationTimer",
+        "uboraui",
+        "inn-mployee",
+        "rationalAgent",
+        "Hog",
+        "Ants_And_Bees",
+        "Inventory_System",
+        "dsa_practise",
+        "introtoai",
+        "truck_plan",
+        "odin-recipes"
+    ],
+
+    "projects": {
+        "gereza": {
+            "title": "Gereza",
+            "description": "An AI-powered multiplayer prison escape game where Gemini AI acts as game master, with real-time state sync via Colyseus and a lobby system for managing players.",
+            "tech": ["Next.js", "Colyseus", "Gemini AI", "SQLite"]
+        },
+        "grtn_2026": {
+            "title": "Ghana Road Transport Network",
+            "description": "A JavaFX application for analyzing Ghana's road network, with shortest-path algorithms, cost analysis and interactive graph visualization.",
+            "tech": ["Java", "JavaFX", "Maven"]
+        },
+        "sika": {
+            "title": "Sika",
+            "description": "A peer-to-peer lending platform for Ashesi students where borrowers request loans, lenders fund them, and repayments are scheduled and tracked.",
+            "tech": ["Flask", "SQLAlchemy", "MySQL", "JavaScript"]
+        },
+        "AUPS_Rocket_Shuttle": {
+            "title": "AUPS Rocket Shuttle",
+            "description": "Flight control software for the African Union Panther Shuttle, using sensor fusion and Kalman filtering for stabilization, parachute deployment and autonomous flight.",
+            "tech": ["C++", "Arduino"]
+        },
+        "TradingAlgo": {
+            "title": "Fuzzy Logic Trading Algorithm",
+            "description": "A fuzzy-logic trading signal for the S&P 500 that combines market trend and RSI into buy, hold or sell decisions, charted in the browser.",
+            "tech": ["Python", "scikit-fuzzy", "Flask", "Chart.js"]
+        },
+        "agent_TikTakToe": {
+            "title": "Unbeatable Tic-Tac-Toe AI",
+            "description": "A Q-learning Tic-Tac-Toe AI that learns optimal strategies through gameplay, with a Tkinter interface and a persistent Q-table stored in CSV.",
+            "tech": ["Python", "Tkinter", "Q-learning"]
+        },
+        "Twitter_Sentimental_Map": {
+            "title": "Twitter Sentiment Map",
+            "description": "Analyzes the sentiment of tweets across the US and draws a map of regional differences in public opinion.",
+            "tech": ["Python", "Matplotlib", "NumPy"]
+        },
+        "presentationTimer": {
+            "title": "Presentation Timer",
+            "description": "A shared countdown timer for capstone presentations: create a timer, share its link, and every viewer sees it start and stop in real time.",
+            "tech": ["Java", "Spring Boot", "WebSockets"]
+        },
+        "uboraui": {
+            "title": "Ubora Tickets",
+            "description": "A JavaFX desktop app for buying event tickets: register, choose a Regular or VIP ticket, and get a ticket with a generated QR code.",
+            "tech": ["Java", "JavaFX", "ZXing", "Maven"]
+        },
+        "inn-mployee": {
+            "title": "InnBucks Employee Onboarding",
+            "description": "The HR onboarding web app I built during my InnBucks internship, which cut onboarding time from 3 weeks to under 4 hours.",
+            "tech": ["Angular", "Firebase", "TypeScript"],
+            "replaceReadme": true
+        },
+        "rationalAgent": {
+            "title": "Rational Vacuum Agent",
+            "description": "A Tkinter simulation of a rational vacuum-cleaner agent that navigates a grid and cleans dirt using different strategies.",
+            "tech": ["Python", "Tkinter"]
+        },
+        "Hog": {
+            "title": "Hog Dice Game",
+            "description": "A digital version of Hog, the UC Berkeley dice game, with pluggable AI strategies and a GUI to play against the computer or a friend.",
+            "tech": ["Python"]
+        },
+        "Ants_And_Bees": {
+            "title": "Ants Vs. SomeBees",
+            "description": "A tower-defense game where ants defend their colony against invading bees using unique powers, inspired by Plants Vs. Zombies.",
+            "tech": ["Python", "OOP", "GUI"]
+        },
+        "Inventory_System": {
+            "title": "Inventory Management System",
+            "description": "An inventory management app with a Tkinter GUI and CSV persistence for adding, updating, deleting and viewing items.",
+            "tech": ["Python", "Tkinter"]
+        },
+        "dsa_practise": {
+            "title": "Data Structures in Practice",
+            "description": "Data structures built from scratch in Java and applied to everyday problems: a browser history, a music playlist and a contact list.",
+            "tech": ["Java"],
+            "replaceReadme": true
+        },
+        "introtoai": {
+            "title": "Intro to AI Search Algorithms",
+            "description": "Implementations of classic AI search algorithms, starting with best-first search in a vacuum-cleaner world.",
+            "tech": ["Python"]
+        },
+        "truck_plan": {
+            "title": "Truck Plan",
+            "description": "A scheduling task for planning truck operations."
+        },
+        "odin-recipes": {
+            "title": "Odin Recipes",
+            "description": "A multi-page recipe site from The Odin Project, featuring Zimbabwean dishes like sadza neMuriwo, nhopi and umxhanxa.",
+            "tech": ["HTML"]
+        }
+    },
+
+    "extras": [
+        {
+            "slug": "beeply",
+            "title": "Beeply",
+            "description": "A mentor-mentee matching platform that uses GPT-4o to score and rank mentor compatibility, returning only strong matches above a 70% threshold.",
+            "tech": ["React", "Node.js", "Express", "OpenAI"]
+        }
+    ]
+}
