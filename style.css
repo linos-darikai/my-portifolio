@@ -380,47 +380,12 @@ img{
     flex-direction: column;
 }
 .Project{
-    position: relative;
-    display: flex;
     background-color: #112240;
     padding: 10px;
     margin: 5px ;
-    min-height: 300px;
+    height: 300px;
     width: 300px;
     border-radius: 4px;
-}
-.Project.is-hidden{
-    display: none;
-}
-.project-inner{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-.project-inner footer{
-    margin-top: auto;
-}
-/* The title link stretches over the whole card; the icon links sit above it */
-.project-card-link{
-    color: inherit;
-}
-.project-card-link::after{
-    content: '';
-    position: absolute;
-    inset: 0;
-}
-.project-links a{
-    position: relative;
-    z-index: 1;
-}
-.project-read-more{
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 12px;
-    font-family: "JMono";
-    font-size: 12px;
-    color: #60F5D2;
 }
 .project-top{
     display: flex;
@@ -430,9 +395,6 @@ img{
 }
 .project-inner{
     margin: 15px;
-}
-.project-tech-stack li{
-    margin-right: 10px;
 }
 .Project:hover{
     transform: translateY(-5px);
@@ -463,7 +425,6 @@ img{
     align-items: flex-end;
     flex-wrap: wrap;
     margin: 20px 0px 0px;
-    padding: 0;
     font-size: 12px;
     color: #626e8c;
     list-style-type: none;
@@ -522,153 +483,6 @@ img{
     font-size: 11px;
     text-align: center;
     padding-bottom: 20px;
-}
-
-/*Project detail pages (projects/<slug>/)*/
-.logo a{
-    color: inherit;
-}
-.project-page{
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 120px 24px 80px;
-}
-.back-link{
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-}
-.project-page-header{
-    margin: 30px 0 40px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #233554;
-}
-.project-page-title{
-    font-size: clamp(30px, 6vw, 48px);
-    color: #ccd6f6;
-    line-height: 1.15;
-}
-.project-page-description{
-    font-size: 16px;
-    line-height: 1.6;
-    color: #8892b0;
-    margin: 16px 0 0;
-}
-.project-page-header .project-tech-stack{
-    padding: 0;
-    margin: 20px 0;
-    font-family: "JMono";
-    color: #60F5D2;
-}
-.project-page-links{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-}
-.project-page-links a{
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-}
-
-/*README content rendered by GitHub*/
-.readme{
-    font-family: "Monstreal";
-    font-size: 15px;
-    line-height: 1.7;
-    color: #a8b2d1;
-    overflow-wrap: break-word;
-}
-.readme h1,
-.readme h2,
-.readme h3,
-.readme h4{
-    font-family: "JMono";
-    color: #ccd6f6;
-    line-height: 1.3;
-    margin: 36px 0 14px;
-}
-.readme h1{ font-size: 28px; }
-.readme h2{ font-size: 22px; }
-.readme h3{ font-size: 18px; }
-.readme h4{ font-size: 16px; }
-.readme > :first-child,
-.readme .markdown-body > :first-child,
-.readme .markdown-heading:first-child h1{
-    margin-top: 0;
-}
-.readme .anchor{
-    display: none;
-}
-.readme p,
-.readme ul,
-.readme ol{
-    margin: 0 0 16px;
-}
-.readme li{
-    margin: 0 0 6px;
-}
-.readme a{
-    color: #60F5D2;
-}
-.readme a:hover{
-    text-decoration: underline;
-}
-.readme strong{
-    color: #ccd6f6;
-}
-.readme img{
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-}
-.readme code{
-    font-family: "JMono";
-    font-size: 13px;
-    padding: 2px 6px;
-    border-radius: 4px;
-    background-color: #112240;
-    color: #ccd6f6;
-}
-.readme pre{
-    overflow-x: auto;
-    padding: 16px;
-    border-radius: 6px;
-    background-color: #112240;
-    line-height: 1.5;
-}
-.readme pre code{
-    padding: 0;
-    background: none;
-}
-.readme blockquote{
-    margin: 0 0 16px;
-    padding: 4px 16px;
-    border-left: 3px solid #60F5D2;
-    color: #8892b0;
-}
-.readme table{
-    display: block;
-    overflow-x: auto;
-    border-collapse: collapse;
-    margin: 0 0 16px;
-}
-.readme th,
-.readme td{
-    padding: 8px 12px;
-    border: 1px solid #233554;
-    text-align: left;
-}
-.readme th{
-    color: #ccd6f6;
-    background-color: #112240;
-}
-.readme hr{
-    border: 0;
-    border-top: 1px solid #233554;
-    margin: 30px 0;
 }
 
 /*Tablet: drop the fixed side rails, socials move to the footer*/
@@ -914,10 +728,8 @@ img{
         grid-template-columns: 1fr;
     }
     .Project{
+        height: auto;
         min-height: 260px;
-    }
-    .project-page{
-        padding: 90px 20px 60px;
     }
 
     .fifth-page{
