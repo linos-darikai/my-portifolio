@@ -5,5 +5,36 @@
  background-color: green;
  width: 200px;
  height: auto;
- flex-direction: column;
+ font-family: "Lora", sans-serif;
+ font-size: x-large;
+ font-weight: 700;
+
+}
+.text{
+    font-family: "Popping", sans-serif;
+    font-weight: 600;
+}
+
+/*
+ Optimize here for the fonts and use the @import taking form Google Fonts
+ and website compatability issues
+*/
+@font-face {
+    font-family: "Lora" ;
+    src: url("resources/fonts/Lora/Lora-VariableFont_wght.ttf") format(".ttf");
+    font-weight: 300 700;
+    font-stretch: 75% 125%;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: "Monstreal";
+    src: url("resources/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+    font-weight: 300 700;
+    font-stretch: 75% 125%;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Popping";
+    src: url("resources/fonts/Poppins/Poppins-Light.ttf");
 }
