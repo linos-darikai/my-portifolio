@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+.label {
+ background-color: green;
+ width: 200px;
+ height: auto;
+ flex-direction: column;
+}
