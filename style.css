@@ -1,13 +1,18 @@
 * {
     box-sizing: border-box;
 }
+body{
+    background-color: white;
+    background-image: radial-gradient(circle, purple 1px, transparent 1px);
+    background-size: 20px 20px; /* Adjust spacing of dots */
+}
 
-.Menu {
-    background-color: aqua;
+
+.Menu {    
     display: flex;  
 }
 .links{
-    background-color: brown;
+    
     width: 100%;
     display: flex;
     flex-direction: rows;
@@ -18,25 +23,23 @@
 .navlink{
     height: 100%;
     width: 10%;
-    background-color: yellow;
     margin: 5px;
 }
 .logo{
     background-color: green;
 }
 .social-media{
-    background-color: beige;
     grid-area: socials;
     padding: 10px;
   
 }
 .email{
-    background-color: yellowgreen;
+   
     grid-area: email;
     padding: 10px;
 }
 .intro{
-    background-color: blueviolet;
+    
     grid-area: intro;
     flex-grow: 1;  /* Allow it to take available space */
     width: 100%;    /* Ensure it fills its grid space */
@@ -50,32 +53,49 @@
 
 }
 .header{
-    background-color: violet;
     padding: 10px;
     grid-area: header;
 }
 .info{
-    background-color: green;
     padding: 10px;
     grid-area: info;
 }
 .detail-aboutme{
-    background-color: bisque;
     padding: 10px;
     width: 100%;
     flex-grow: 1;
     grid-area: details;
 }
+/*There is a need to use flex*/
 .second-page{
     display: grid;
     grid-template-areas: "header header"
                          "info details";
     grid-template-columns: 20% auto;
     height: 100vh; 
-    grid-template-rows: 30% auto ;
-
+    grid-template-rows: 10% auto ;
+}
+.Project{
+    background-color: blue;
+    padding: 10px;
+    margin: 5px ;
+}
+.third-page{
+    height: 100vh;
 
 }
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    row-gap: 10px;
+    column-gap: 10px;
+    
+
+}
+.fourth-page{
+    height: 100vh;
+}
+
 
 
 
