@@ -1,19 +1,56 @@
 * {
     box-sizing: border-box;
 }
-.label {
- background-color: green;
- width: 200px;
- height: auto;
- font-family: "Lora", sans-serif;
- font-size: x-large;
- font-weight: 700;
+
+.Menu {
+    background-color: aqua;
+    display: flex;  
+}
+.links{
+    background-color: brown;
+    width: 100%;
+    display: flex;
+    flex-direction: rows;
+    justify-content: flex-end;
+    align-items: center;
 
 }
-.text{
-    font-family: "Popping", sans-serif;
-    font-weight: 600;
+.navlink{
+    height: 100%;
+    width: 10%;
+    background-color: yellow;
+    margin: 5px;
 }
+.logo{
+    background-color: green;
+}
+.social-media{
+    background-color: beige;
+    grid-area: socials;
+    padding: 10px;
+  
+}
+.email{
+    background-color: yellowgreen;
+    grid-area: email;
+    padding: 10px;
+}
+.intro{
+    background-color: blueviolet;
+    grid-area: intro;
+    flex-grow: 1;  /* Allow it to take available space */
+    width: 100%;    /* Ensure it fills its grid space */
+}
+
+.first-page{
+    display: grid;    
+    grid-template-columns: 7% auto 7%; /* Middle column takes the remaining space */
+    grid-template-areas: "socials intro email";
+    height: 700px;
+
+}
+
+
 
 /*
  Optimize here for the fonts and use the @import taking form Google Fonts
@@ -22,9 +59,9 @@
 @font-face {
     font-family: "Lora" ;
     src: url("resources/fonts/Lora/Lora-VariableFont_wght.ttf") format(".ttf");
-    font-weight: 300 700;
+    font-weight: 300 700;/*Range*/
     font-stretch: 75% 125%;
-    font-style: normal;
+    font-style: normal; /*Necessary for the webpage to know*/
 
 }
 @font-face {
