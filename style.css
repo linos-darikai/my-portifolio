@@ -4,12 +4,17 @@
 body{
     background-color:#0A192F;
 }
+h1{
+    margin: 0;
+}
 
 .text-color-grey{
     color: #b6bdcf;
-    
+    font-family: "JMono";
+    font-size: small;
+    margin: 0;    
 }
-.text-color-grey{
+.text-color-grey-light{
     color: #ccd6f6;
     
 }
@@ -20,6 +25,7 @@ body{
 .text-color-green{
     color: #60F5D2;
     margin-right: 5px; 
+    font-family: "JMono";
     
 }
 
@@ -35,6 +41,7 @@ body{
     flex-direction: rows;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 3px;
 
 }
 a{
@@ -88,7 +95,7 @@ a:hover{
 .social-media::after {
     content: '';
     display: block;
-    width: 1px;
+    width: 2px;
     height: 100px;
     margin: 0 auto;
     background-color: #b6bdcf;
@@ -125,14 +132,16 @@ a:hover{
 }
   
   .email-text {
-    letter-spacing: 0.1em;
-    padding: 10px;
+    letter-spacing: 0.2em;
+    padding: 20px;
   }
 .intro{
-    
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
     grid-area: intro;
-    flex-grow: 1;  /* Allow it to take available space */
-    width: 100%;    /* Ensure it fills its grid space */
+    padding: 10px;
 }
 
 .first-page{
@@ -141,11 +150,14 @@ a:hover{
     grid-template-areas: "socials intro email";
     height: 100vh;
 
+
 }
 .head-text{
-    display: inline-flex;
-    justify-content: center;
+    font-size:x-large;
+    margin-bottom: 15px;
 }
+
+
 .header{
     padding: 10px;
     grid-area: header;
@@ -213,6 +225,15 @@ a:hover{
     font-stretch: 75% 125%;
     font-style: normal;
 }
+@font-face {
+    font-family: "JMono";
+    src: url("resources/fonts/mono/JetBrainsMono-VariableFont_wght.ttf");
+    font-weight: 300 700;
+    font-stretch: 75%;
+    font-style: normal;
+}
+
+
 @font-face {
     font-family: "Popping";
     src: url("resources/fonts/Poppins/Poppins-Light.ttf");
