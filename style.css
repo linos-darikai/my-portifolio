@@ -7,6 +7,9 @@ body{
 h1{
     margin: 0;
 }
+p{
+    font-size: 20px;
+}
 
 .small-letter{
     font-size:smaller;
@@ -137,10 +140,11 @@ a:hover{
     background-color: #b6bdcf;
 }
   
-  .email-text {
+.email-text {
     letter-spacing: 0.3em;
     padding: 20px;
   }
+
 .intro{
     display: flex;
     align-items: flex-start;
