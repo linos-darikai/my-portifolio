@@ -82,6 +82,9 @@ a:hover{
 }
 .logo{
     display: inline;
+    margin: 10px;
+    margin-left: 40px;
+  
 }
 .social-media {
     grid-area: socials;
