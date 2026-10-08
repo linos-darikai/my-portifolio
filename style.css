@@ -87,6 +87,7 @@ a:hover{
   
 }
 .social-media {
+    position: fixed;
     grid-area: socials;
     padding: 10px;
     font-size: 18px;
@@ -118,6 +119,7 @@ a:hover{
 }
 
 .email {
+    position: fixed;
     bottom: 0;
     right: 40px;
     writing-mode: vertical-rl;
