@@ -11,6 +11,32 @@ h1{
 .small-letter{
     font-size:smaller;
 }
+.topic-height{
+    display: flex;
+    flex-direction: row;
+}
+.topic-height::after {
+    content: '';
+    display: inline;
+    width: 500px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #233554;
+    margin-top: 25px;
+    margin-left: 45px
+}
+.topic-height-grey{
+    font-size: x-large;
+    font-family: "JMono";
+    font-weight: 600;
+    color: #b6bdcf;
+}
+.topic-height-green{
+    font-size:medium;
+    font-family: "JMono";
+    font-weight: 600;
+    color: #60F5D2;
+}
 .text-color-grey{
     color: #b6bdcf;
     font-family: "JMono";
@@ -29,6 +55,7 @@ h1{
     color: #60F5D2;
     margin-right: 5px; 
     font-family: "JMono";
+
     
 }
 
@@ -121,7 +148,7 @@ a:hover{
 .email {
     position: fixed;
     bottom: 0;
-    right: 40px;
+    right: 20px;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     display: flex;
@@ -141,7 +168,7 @@ a:hover{
   
   .email-text {
     letter-spacing: 0.3em;
-    padding: 20px;
+    padding: 15px;
   }
 .intro{
     display: flex;
@@ -166,28 +193,19 @@ a:hover{
 }
 
 
-.header{
-    padding: 10px;
-    grid-area: header;
+.about{
+    width: 85%;
+    height: 100vh;
 }
-.info{
-    padding: 10px;
-    grid-area: info;
-}
-.detail-aboutme{
-    padding: 10px;
-    width: 100%;
-    flex-grow: 1;
-    grid-area: details;
-}
+
+
 /*There is a need to use flex*/
 .second-page{
-    display: grid;
-    grid-template-areas: "header header"
-                         "info details";
-    grid-template-columns: 20% auto;
-    height: 100vh; 
-    grid-template-rows: 10% auto ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
 }
 .Project{
     background-color: blue;
