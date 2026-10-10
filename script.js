@@ -2,6 +2,8 @@
 let prevScroll = window.scrollY;
 let buttons = document.querySelectorAll('.tab');
 let content = document.querySelector(".content");
+let projects = document.querySelector(".projects");
+let showMoreButton = document.querySelector(".show-more-button");
 let contentArray = [`
 <h1>Teaching Assistant (Internship) <a  target="_blank" rel="noopener noreferrer" href="https://emziniwecode.com/" style="color: #00f5d4;">@ EmziniWeCode</a></h1>
 <p>January 2024 – Present</p>
@@ -48,6 +50,62 @@ let contentArray = [`
 </div>
 `];
 
+let projectArray = [`<div class="Project">                
+    <div class="project-inner">
+        <header>
+            <div class="project-top">
+                <div class="folder">
+                    <i class="ph-light ph-folder-simple color-green" style="font-size: 50px;"></i>
+                </div>
+                <div class="project-links">
+                    <i class="ph-light ph-github-logo color-grey" style="font-size: 30px;"></i>
+                    <i class="ph-thin ph-arrow-square-out color-grey" style="font-size: 30px;"></i>                               
+                </div>                 
+            </div>
+
+            <h3 class="project-title">Hog Game Simulator</h3>
+            <div class="project-description">
+                <span>Simulates the Hog dice game with AI strategies, a GUI interface, and game logic based on the CS61A project.</span>
+            </div>
+        </header>
+        <footer>
+            <ul class="project-tech-stack">
+                <li>Python</li>
+                <li>GUI</li>
+                <li>CS61A</li>
+            </ul>
+        </footer>
+    </div>
+</div>
+`, `<div class="Project">                
+    <div class="project-inner">
+        <header>
+            <div class="project-top">
+                <div class="folder">
+                    <i class="ph-light ph-folder-simple color-green" style="font-size: 50px;"></i>
+                </div>
+                <div class="project-links">
+                    <i class="ph-light ph-github-logo color-grey" style="font-size: 30px;"></i>
+                    <i class="ph-thin ph-arrow-square-out color-grey" style="font-size: 30px;"></i>                               
+                </div>                 
+            </div>
+
+            <h3 class="project-title">Ants Vs. SomeBees</h3>
+            <div class="project-description">
+                <span>A strategy game where ants defend against invading bees using unique powers, inspired by Plants Vs. Zombies.</span>
+            </div>
+        </header>
+        <footer>
+            <ul class="project-tech-stack">
+                <li>Python</li>
+                <li>OOP</li>
+                <li>GUI</li>
+            </ul>
+        </footer>
+    </div>
+</div>
+`];
+
 content.innerHTML = contentArray[0];
 
 function scrollReg(){
@@ -63,8 +121,19 @@ function scrollReg(){
     }
     prevScroll = currScroll;
 }
-
 window.onscroll = scrollReg;
+
+function loadMoreProj(){
+  for(let i = 0; i < projectArray.length; i++){
+    projects.innerHTML += projectArray[i];
+  }
+  showMoreButton.remove();
+}
+
+showMoreButton.addEventListener("click", loadMoreProj);
+
+
+
 
 
 
@@ -91,6 +160,8 @@ buttons.forEach(button => {
         console.log('Button clicked: ' + this.textContent);
     });
 });
+
+
 
 
 
