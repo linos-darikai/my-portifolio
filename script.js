@@ -7,6 +7,16 @@ let showMoreButton = document.querySelector(".show-more-button");
 let menuToggle = document.querySelector(".menu-toggle");
 let navBackdrop = document.querySelector(".nav-backdrop");
 let contentArray = [`
+<h1>Software Engineering Associate <span style="color: #00f5d4;">@ Techustle AFi Payments</span></h1>
+<p>May 2026 – Present · Remote</p>
+<div>
+  <ul>
+    <li class="r-points">Own frontend engineering for a cross-platform fintech app (React, TypeScript, Capacitor) used by 10,000+ users across iOS, Android, and web.</li>
+    <li class="r-points">Created passkey-based biometric sign-in and fixed a crash-causing bug in Capgo's underlying open-source plugin, which has 623,292 downloads.</li>
+    <li class="r-points">Led a full redesign of the app's visual language, replacing ad hoc styling with a token-based design system (spacing, type, icons) adopted across 50 screens.</li>
+  </ul>
+</div>
+`,`
 <h1>Software Developer  <a target="_blank" rel="noopener noreferrer" href="https://ashesi.edu.gh/" style="color: #00f5d4;">@ Ashesi Cobot Research Team</a></h1>
 <p>January 2025 – Present</p>
 <div>
@@ -209,27 +219,14 @@ showMoreButton.addEventListener("click", loadMoreProj);
 
 
 
-buttons.forEach(button => {
+// Tabs and contentArray are in the same order, so each tab shows the entry at its position
+buttons.forEach((button, index) => {
     button.addEventListener('click', function() {
         buttons.forEach(btn => {
             btn.classList.remove('active');
         });
         this.classList.add('active');
-
-        if(this.textContent === "Innbucks"){
-            content.innerHTML = contentArray[2];
-        }
-        if(this.textContent === "Emzini WeCode"){
-            content.innerHTML = contentArray[3];
-            console.log('Button clicked: ' + this.textContent);
-        }
-        if(this.textContent === "Cobot Research Team"){
-            content.innerHTML = contentArray[0];            
-        }
-        if(this.textContent === "Develop for Good"){
-            content.innerHTML = contentArray[1];            
-        }
-        console.log('Button clicked: ' + this.textContent);
+        content.innerHTML = contentArray[index];
     });
 });
 
