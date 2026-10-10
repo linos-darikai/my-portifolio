@@ -43,9 +43,7 @@ section {
     font-size: x-large;
     font-family: "JMono";
     font-weight: 600;
-    color: #b6bdcf;
-    display: inline-flex;
-    align-items: center;
+    color: #b6bdcf;  
     
 }
 .topic-height-green{
@@ -125,8 +123,9 @@ a:hover{
 }
 .resume-button:hover{
     transform: translateY(-5px);
-    box-shadow: 5px 6px 0 0 #60F5D2; /* Increased shadow distance */
-
+   
+    box-shadow: 5px 6px 0 0 #60F5D2;
+     /* Increased shadow distance */
 }
 .logo{
     display: inline;
@@ -162,6 +161,7 @@ a:hover{
 .social-media a:hover {
     color: #60F5D2;
     transform: translateY(-5px);
+    transition: transform 0.4s ease;
 }
 .social-media a {
     margin-bottom: 15px;
@@ -223,15 +223,32 @@ a:hover{
     margin-bottom: 15px;
    
 }
+
+.persona-pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)); 
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)); 
+}
 .persona-pic{
     grid-area: pic;
-    background-color: rgb(255, 0, 0);
-    height: 100vh ;
+    height: 50%;
+    position: relative;
+    height: 600px;
+    width: 600px;
 
 }
 .about-text{
-    background-color: #ccd6f6;
-    grid-area: text
+    background-color:#0A192F;
+    grid-area: text;
+    margin-right: 20px;
+}
+img{
+   
+    border-radius: 30px;
+    background-color:#0A192F;
+    margin-top: 5px;
 }
 
 
@@ -242,7 +259,7 @@ a:hover{
     grid-template-areas: 
     "top-header top-header"
     "pic text";
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 35% 65%;
     
 
 }
