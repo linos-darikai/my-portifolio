@@ -12,6 +12,9 @@ body{
 h1{
     margin: 0;
 }
+li{
+    margin-right: 6px;
+}
 
 
 
@@ -31,6 +34,7 @@ section {
     display: flex;
     flex-direction: row;
     grid-area: top-header;
+    margin-bottom: 20px;
 }
 .topic-height::after {
     content: '';
@@ -367,13 +371,14 @@ img{
 }
 /*Project page*/
 .fourth-page{
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .Project{
     background-color: #112240;
     padding: 10px;
     margin: 5px ;
-    height: 350px;
+    height: 300px;
     width: 300px;
     border-radius: 4px;
 }
@@ -381,17 +386,73 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 .project-inner{
     margin: 15px;
 }
+.Project:hover{
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.Project:hover .project-title{
+    color:#60F5D2;
+}
 .projects{
-    display: flex;   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+.project-title{
+    font-family: "Monstreal";
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.project-description{
+    font-size: 13px;
+    font-family: "Monstreal";
+    margin-bottom: 10px;
+}
+.project-tech-stack{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 20px 0px 0px;
+    font-size: 12px;
+    color: #626e8c;
+    list-style-type: none;
+    font-family: "Monstreal";
+    
+}
+.button-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 
 }
+.show-more-button{
+    background-color: #0A192F;
+    color:#60F5D2;
+    border: 2px solid #60F5D2;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    font-family: "JMono";
+}
+
+.show-more-button:hover{
+    transform: translateY(-3px);   
+    box-shadow: 3px 5px 0 0 #60F5D2;
+    transition: ease-in-out 0.3s;
+     /* Increased shadow distance */
+}
+/*fifth page last and not least page*/
 .fifth-page{
-    height: 100vh;
+
 }
 
 
