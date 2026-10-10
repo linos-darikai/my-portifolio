@@ -237,6 +237,22 @@ a:hover{
     column-count: 3; 
     column-gap: 20px;
 }
+.r-points{
+    list-style-type: none;
+    text-align: start;
+    text-indent: -18px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+
+}
+.r-points::before{
+    position: relative;
+    content: "▷";
+    color: #60F5D2;
+    margin: 5px;
+    right: 10px;
+    font-size: small;
+}
 
 .persona-pic img {
     width: 100%;
@@ -323,11 +339,13 @@ img{
 }
 
 .content{
-    display: inline;
-    margin-top: 50px;
+    display: flex;
+    margin-top: 10px;
     height: 400px;
     grid-area: content;
-    margin-left: 20px;
+    margin-left: 10px;
+    justify-content: flex-start;
+    flex-direction: column;
 
 }
 .third-page{
