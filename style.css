@@ -26,22 +26,27 @@ section {
 .topic-height{
     display: flex;
     flex-direction: row;
+    grid-area: top-header;
 }
 .topic-height::after {
     content: '';
     display: inline;
-    width: 500px;
+    width: 100vh;
     height: 1px;
     margin: 0 auto;
     background-color: #233554;
     margin-top: 25px;
-    margin-left: 45px
+    margin-left: 45px;
 }
+
 .topic-height-grey{
     font-size: x-large;
     font-family: "JMono";
     font-weight: 600;
     color: #b6bdcf;
+    display: inline-flex;
+    align-items: center;
+    
 }
 .topic-height-green{
     font-size:medium;
@@ -208,12 +213,30 @@ a:hover{
 .head-text{
     font-size:x-large;
     margin-bottom: 15px;
+   
+}
+.persona-pic{
+    grid-area: pic;
+    background-color: rgb(255, 0, 0);
+    height: 100vh;
+
+}
+.about-text{
+    background-color: #ccd6f6;
+    grid-area: text
 }
 
 
 .about{
+    display: grid;
     width: 85%;
     height: 100vh;
+    grid-template-areas: 
+    "top-header top-header"
+    "pic text";
+    grid-template-columns: 30% 70%;
+    
+
 }
 
 
