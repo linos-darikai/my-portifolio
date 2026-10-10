@@ -7,7 +7,7 @@ function scrollReg(){
     let navBar = document.getElementById("navbar");
     if(currScroll - prevScroll < 0 ){
         navBar.style.top = 0;
-        navBar.style.backgroundColor = "rgb(10, 25, 47, 0.998)";
+        navBar.style.backgroundColor = "rgb(9, 25, 47, 0.97)";
 
     }
     else{
