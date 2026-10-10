@@ -71,11 +71,15 @@ section {
     
 }
 
-
-
-.Menu {    
-    display: flex;  
+#navbar{
+    top: 0;
+    position: fixed;
+    display: flex; 
+    width: 100%;
+    transition: top 0.4s;
 }
+
+
 .links{
     
     width: 100%;
