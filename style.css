@@ -268,8 +268,6 @@ a:hover{
     width: 100%;
     height: auto;
     display: block;
-    mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)); 
-    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)); 
 }
 .persona-pic{
     grid-area: pic;
@@ -474,7 +472,7 @@ img{
 }
 
 .footer-text{
-    font-family: "JMono";
+    font-family: "Monstreal";
     font-size: 11px;
     text-align: center;
 }
