@@ -14,7 +14,7 @@ let contentArray = [`
   </ul>
 </div>
 `,`
-<h1>Content Curator (Volunteer) <a target="_blank" rel="noopener noreferrer" href="https://edutecx.com/" style="color: #00f5d4;">@ EduTecX</span></h1>
+<h1>Content Curator (Volunteer) <a target="_blank" rel="noopener noreferrer" href="https://edutecx.com/" style="color: #00f5d4;">@ EduTecX</a></h1>
 <p>January – December 2024</p>
 <div>
   <ul>
