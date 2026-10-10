@@ -138,7 +138,7 @@ a:hover{
     position: fixed;
     grid-area: socials;
     padding: 10px;
-    font-size: 18px;
+    font-size: 20px;
     display: flex; 
     gap: 15px;
     margin-left: 50px;
@@ -146,6 +146,7 @@ a:hover{
     align-items: center; 
     justify-content: flex-end; 
     height: 100%; /* Ensure it takes full height of grid area */
+    transition: transform 0.7s ease;
 }
 
 .social-media::after {
@@ -155,10 +156,12 @@ a:hover{
     height: 100px;
     margin: 0 auto;
     background-color: #b6bdcf;
+
 }
 
 .social-media a:hover {
     color: #60F5D2;
+    transform: translateY(-5px);
 }
 .social-media a {
     margin-bottom: 15px;
@@ -178,6 +181,11 @@ a:hover{
     justify-content: flex-end; 
     grid-area: email;
    
+  }
+  .email:hover{
+    color: #60F5D2;
+    transform: translateY(-5px);
+    transition: transform 0.4s ease;
   }
   .email::after {
     content: '';
@@ -218,7 +226,7 @@ a:hover{
 .persona-pic{
     grid-area: pic;
     background-color: rgb(255, 0, 0);
-    height: 100vh;
+    height: 100vh ;
 
 }
 .about-text{
