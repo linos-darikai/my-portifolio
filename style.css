@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
   }
@@ -11,8 +12,16 @@ body{
 h1{
     margin: 0;
 }
+ul{
+    list-style-type: none;
+    column-count: 3; 
+    column-gap: 20px;
+  
+}
+
+
 p{
-    font-size: 20px;
+    font-size: 16px;
 }
 section {
     margin: 0px auto;
@@ -215,13 +224,23 @@ a:hover{
     grid-template-columns: 7% auto 7%; /* Middle column takes the remaining space */
     grid-template-areas: "socials intro email";
     height: 100vh;
-
-
 }
+
+/*The second page*/
 .head-text{
     font-size:x-large;
     margin-bottom: 15px;
    
+}
+.fa-play{
+    color: #60F5D2 ;
+    padding: 5px;
+    margin-left: 5px;
+}
+.language-list{
+    display: inline-block;
+    
+    justify-content: center;
 }
 
 .persona-pic img {
@@ -235,14 +254,15 @@ a:hover{
     grid-area: pic;
     height: 50%;
     position: relative;
-    height: 600px;
-    width: 600px;
+    height: 400px;
+    width: 400px;
 
 }
 .about-text{
     background-color:#0A192F;
     grid-area: text;
     margin-right: 20px;
+    padding: 0px;
 }
 img{
    
@@ -259,7 +279,7 @@ img{
     grid-template-areas: 
     "top-header top-header"
     "pic text";
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 42% 58%;
     
 
 }
@@ -269,8 +289,7 @@ img{
 .second-page{
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;  
     
 }
 .Project{
