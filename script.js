@@ -5,7 +5,38 @@ let content = document.querySelector(".content");
 let projects = document.querySelector(".projects");
 let showMoreButton = document.querySelector(".show-more-button");
 let contentArray = [`
-<h1>Teaching Assistant (Internship) <a  target="_blank" rel="noopener noreferrer" href="https://emziniwecode.com/" style="color: #00f5d4;">@ EmziniWeCode</a></h1>
+<h1>Software Developer  <a target="_blank" rel="noopener noreferrer" href="https://ashesi.edu.gh/" style="color: #00f5d4;">@ Ashesi Cobot Research Team</a></h1>
+<p>January 2025 – Present</p>
+<div>
+  <ul>
+    <li class="r-points">Collaborated in a 4-member team using GitHub Flow to design, implement, and review features for Cobot, an AI-driven system for grading student logic tasks.</li>
+    <li class="r-points">Developed backend services in JavaScript (Node.js) for audio transcription management.</li>
+    <li class="r-points">Improved error reporting by logging transcription issues and making them traceable during testing, cutting down debugging time by approximately 80%.</li>
+  </ul>
+</div>
+`,`
+<h1>Software Engineer <a target="_blank" rel="noopener noreferrer" href="https://www.developforgood.org/" style="color: #00f5d4;">@ Develop for Good</a></h1>
+<p>October 2025 – Present</p>
+<div>
+  <ul>
+    <li class="r-points">Collaborating with a team of 6 engineers, designers, and PMs to develop a web platform for Pain USA.</li>
+    <li class="r-points">Contributing to technical architecture planning, system design discussions, and technology stack evaluation during the design phase.</li>
+    <li class="r-points">Creating and reviewing technical documentation to establish project requirements and communicate design decisions.</li>
+    <li class="r-points">Utilizing Git/GitHub for version control and participating in empathetic user-centered design.</li>
+  </ul>
+</div>
+`,`
+<h1>Software Engineering Intern <a target="_blank" rel="noopener noreferrer" href="https://www.innbucks.co.zw/" style="color: #00f5d4;">@ InnBucks Microbank</a></h1>
+<p>May 2025 – August 2025</p>
+<div>
+  <ul>
+    <li class="r-points">Reduced HR onboarding time from 3 weeks to under 4 hours by designing with Figma and building a streamlined web application using Angular and Firebase.</li>
+    <li class="r-points">Enabled HR to self-configure onboarding steps via modular components and admin controls, cutting change requests and updates.</li>
+    <li class="r-points">Shipped via GitHub Flow (feature branches, PRs, conflict resolution) and verified core flows with unit and integration tests before release.</li>
+  </ul>
+</div>
+`,`
+<h1>Teaching Assistant <a  target="_blank" rel="noopener noreferrer" href="https://emziniwecode.com/" style="color: #00f5d4;">@ EmziniWeCode</a></h1>
 <p>January 2024 – Present</p>
 <div>
   <ul>
@@ -13,39 +44,6 @@ let contentArray = [`
     <li class="r-points">Led hands-on coding sessions to reinforce theoretical knowledge, enabling students to improve debugging skills.</li>
     <li class="r-points">Provided one-on-one mentorship, guiding students through complex programming concepts and problem-solving techniques.</li>
     <li class="r-points">Organized coding challenges that increased engagement and helped students develop critical thinking skills.</li>
-  </ul>
-</div>
-`,`
-<h1>Content Curator (Volunteer) <a target="_blank" rel="noopener noreferrer" href="https://edutecx.com/" style="color: #00f5d4;">@ EduTecX</a></h1>
-<p>January – December 2024</p>
-<div>
-  <ul>
-    <li class="r-points">Authored 50+ interactive learning modules, simplifying complex IT topics for over 300 students.</li>
-    <li class="r-points">Developed and optimized AI training data, improving response accuracy by 20%.</li>
-    <li class="r-points">Curated diverse learning resources, ensuring students received well-structured, relevant information.</li>
-    <li class="r-points">Analyzed user feedback to enhance AI-generated responses and improve content effectiveness.</li>
-  </ul>
-</div>
-`,`
-<h1>Founder & Lead Developer <a href="#fourth-page" style="color: #00f5d4;">@ Argus.io</a></h1>
-<p>January 2024 – Present</p>
-<div>
-  <ul>
-    <li class="r-points">Built an AI-powered financial platform enabling SMEs to extract insights from scanned receipts.</li>
-    <li class="r-points">Integrated Mono API for seamless bank data retrieval, streamlining financial tracking for users.</li>
-    <li class="r-points">Engineered a receipt-processing pipeline leveraging ChatGPT API to convert scanned receipts into structured JSON data.</li>
-    <li class="r-points">Led customer discovery interviews at Ashesi University’s Entrepreneurship Centre to validate business assumptions and improve product fit.</li>
-  </ul>
-</div>
-`,
-`<h1>Peer Tutor (Computer Programming) <a target="_blank" rel="noopener noreferrer" href = "https://ashesi.edu.gh/" style="color: #00f5d4;">@ Ashesi University</a></h1>
-<p>January 2024 – December 2024</p>
-<div>
-  <ul>
-    <li class="r-points">Provided one-on-one and group tutoring sessions, helping students grasp fundamental programming concepts and improve coding proficiency.</li>
-    <li class="r-points">Designed custom exercises and debugging challenges, reinforcing problem-solving skills among students.</li>
-    <li class="r-points">Conducted coding workshops covering Python, Java, and algorithmic thinking to enhance student learning outcomes.</li>
-    <li class="r-points">Supported students with coursework and projects, increasing class-wide assignment completion rates by fostering a collaborative learning environment.</li>
   </ul>
 </div>
 `];
@@ -144,17 +142,17 @@ buttons.forEach(button => {
         });
         this.classList.add('active');
 
-        if(this.textContent === "Argus.oi"){
+        if(this.textContent === "Innbucks"){
             content.innerHTML = contentArray[2];
         }
         if(this.textContent === "Emzini WeCode"){
-            content.innerHTML = contentArray[0];
+            content.innerHTML = contentArray[3];
             console.log('Button clicked: ' + this.textContent);
         }
-        if(this.textContent === "Ashesi University"){
-            content.innerHTML = contentArray[3];            
+        if(this.textContent === "Cobot Research Team"){
+            content.innerHTML = contentArray[0];            
         }
-        if(this.textContent === "EduTecX"){
+        if(this.textContent === "Develop for Good"){
             content.innerHTML = contentArray[1];            
         }
         console.log('Button clicked: ' + this.textContent);
