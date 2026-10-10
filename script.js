@@ -1,9 +1,11 @@
 
+let prevScroll = window.scrollY;
 let buttons = document.querySelectorAll('.tab');
 let content = document.querySelector(".content");
 let projects = document.querySelector(".projects");
-let showMoreButton = document.querySelector("#show-more-projects");
-const INITIAL_PROJECT_COUNT = 6;
+let showMoreButton = document.querySelector(".show-more-button");
+let menuToggle = document.querySelector(".menu-toggle");
+let navBackdrop = document.querySelector(".nav-backdrop");
 let contentArray = [`
 <h1>Software Developer  <a target="_blank" rel="noopener noreferrer" href="https://ashesi.edu.gh/" style="color: #00f5d4;">@ Ashesi Cobot Research Team</a></h1>
 <p>January 2025 – Present</p>
@@ -48,64 +50,164 @@ let contentArray = [`
 </div>
 `];
 
-content.innerHTML = contentArray[0];
-
-function escapeHTML(text){
-    return String(text ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
-}
-
-// Project cards come from data/projects.js, generated from GitHub by scripts/build-projects.mjs
-function projectCard(project, hidden){
-    let links = "";
-    if(project.repoUrl){
-        links += `<a href="${escapeHTML(project.repoUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHTML(project.title)} on GitHub"><i class="ph-light ph-github-logo color-grey" style="font-size: 30px;"></i></a>`;
-    }
-    if(project.liveUrl){
-        links += `<a href="${escapeHTML(project.liveUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHTML(project.title)} live site"><i class="ph-thin ph-arrow-square-out color-grey" style="font-size: 30px;"></i></a>`;
-    }
-    return `
-    <div class="Project${hidden ? " is-hidden" : ""}">
+let projectArray = [`
+<div class="Project">                
+    <div class="project-inner">
+        <header>
+            <div class="project-top">
+                <div class="folder">
+                    <i class="ph-light ph-folder-simple color-green" style="font-size: 50px;"></i>
+                </div>
+                <div class="project-links">
+                    <i class="ph-light ph-github-logo color-grey" style="font-size: 30px;"></i>
+                    <i class="ph-thin ph-arrow-square-out color-grey" style="font-size: 30px;"></i>                               
+                </div>                 
+            </div>
+            <h3 class="project-title">Inventory Management System</h3>
+            <div class="project-description">
+                <span>Developed an Inventory Management App using Python's Tkinter for the GUI and CSV files for data persistence, enabling users to add, update, delete, and view inventory items efficiently.</span>
+            </div>
+        </header>
+        <footer>
+            <ul class="project-tech-stack">
+                <li>Python</li>
+                <li>Tkinter</li>
+                <li>SQLite</li>
+            </ul>
+        </footer>
+    </div>
+</div>
+`,`
+<div class="Project">                
+    <div class="project-inner">
+        <header>
+            <div class="project-top">
+                <div class="folder">
+                    <i class="ph-light ph-folder-simple color-green" style="font-size: 50px;"></i>
+                </div>
+                <div class="project-links">
+                    <i class="ph-light ph-github-logo color-grey" style="font-size: 30px;"></i>
+                    <i class="ph-thin ph-arrow-square-out color-grey" style="font-size: 30px;"></i>                               
+                </div>                 
+            </div>
+            <h3 class="project-title">Unbeatable Tic-Tac-Toe AI</h3>
+            <div class="project-description">
+                <span>Developed a Q-learning-based Tic-Tac-Toe AI that learns optimal strategies through gameplay, utilizing Q-values, exploration vs exploitation, and a rewards structure, with a graphical interface in Tkinter and persistent Q-table storage in CSV files.</span>
+            </div>
+        </header>
+        <footer>
+            <ul class="project-tech-stack">
+                <li>Python</li>
+                <li>Tkinter</li>
+                <li>Q-learning</li>
+            </ul>
+        </footer>
+    </div>
+</div>
+`,`
+    <div class="Project">                
         <div class="project-inner">
             <header>
                 <div class="project-top">
                     <div class="folder">
                         <i class="ph-light ph-folder-simple color-green" style="font-size: 50px;"></i>
                     </div>
-                    <div class="project-links">${links}</div>
+                    <div class="project-links">
+                        <i class="ph-light ph-github-logo color-grey" style="font-size: 30px;"></i>
+                        <i class="ph-thin ph-arrow-square-out color-grey" style="font-size: 30px;"></i>                               
+                    </div>                 
                 </div>
-                <h3 class="project-title"><a class="project-card-link" href="${escapeHTML(project.url)}">${escapeHTML(project.title)}</a></h3>
+
+                <h3 class="project-title">Trading Algorithm using Fuzzy Logic</h3><!--put link to github or project details-->
                 <div class="project-description">
-                    <span>${escapeHTML(project.description)}</span>
+                    <span>Developing a stock trading algorithm based on fuzzy logic to predict market trends and make automated trading decisions, visualized with Flask and HTML</span>
                 </div>
             </header>
             <footer>
-                <ul class="project-tech-stack">${project.tech.map(t => `<li>${escapeHTML(t)}</li>`).join("")}</ul>
-                <span class="project-read-more">Read more <i class="ph ph-arrow-right"></i></span>
+                <ul class="project-tech-stack">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Flask</li>
+                </ul>
             </footer>
         </div>
-    </div>`;
+    </div>`
+    , `
+    <div class="Project">                
+    <div class="project-inner">
+        <header>
+            <div class="project-top">
+                <div class="folder">
+                    <i class="ph-light ph-folder-simple color-green" style="font-size: 50px;"></i>
+                </div>
+                <div class="project-links">
+                    <i class="ph-light ph-github-logo color-grey" style="font-size: 30px;"></i>
+                    <i class="ph-thin ph-arrow-square-out color-grey" style="font-size: 30px;"></i>                               
+                </div>                 
+            </div>
+
+            <h3 class="project-title">Ants Vs. SomeBees</h3>
+            <div class="project-description">
+                <span>A strategy game where ants defend against invading bees using unique powers, inspired by Plants Vs. Zombies.</span>
+            </div>
+        </header>
+        <footer>
+            <ul class="project-tech-stack">
+                <li>Python</li>
+                <li>OOP</li>
+                <li>GUI</li>
+            </ul>
+        </footer>
+    </div>
+</div>
+`];
+
+content.innerHTML = contentArray[0];
+
+function setMenu(open){
+    document.body.classList.toggle("menu-open", open);
+    menuToggle.setAttribute("aria-expanded", open);
+    menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
 }
 
-function renderProjects(){
-    let list = window.PROJECTS || [];
-    if(list.length === 0){
-        projects.innerHTML = `<p>See my projects on <a class="text-color-green" href="https://github.com/linos-darikai" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>`;
+menuToggle.addEventListener("click", () => setMenu(!document.body.classList.contains("menu-open")));
+navBackdrop.addEventListener("click", () => setMenu(false));
+document.querySelectorAll(".links a").forEach(link => link.addEventListener("click", () => setMenu(false)));
+document.addEventListener("keydown", e => { if(e.key === "Escape") setMenu(false); });
+// Close the drawer if the screen is resized past the mobile breakpoint
+window.matchMedia("(min-width: 769px)").addEventListener("change", e => { if(e.matches) setMenu(false); });
+
+function scrollReg(){
+    // Keep the navbar in place while the drawer is open
+    if(document.body.classList.contains("menu-open")) return;
+    let currScroll = window.scrollY;
+    let navBar = document.getElementById("navbar");
+    if(currScroll - prevScroll < 0 ){
+        navBar.style.top = 0;
+        navBar.style.backgroundColor = "rgb(9, 25, 47, 0.97)";
+
     }
     else{
-        projects.innerHTML = list.map((project, i) => projectCard(project, i >= INITIAL_PROJECT_COUNT)).join("");
+        navBar.style.top = "-60px";
     }
-    if(list.length <= INITIAL_PROJECT_COUNT){
-        showMoreButton.remove();
-    }
+    prevScroll = currScroll;
 }
+window.onscroll = scrollReg;
 
 function loadMoreProj(){
-  projects.querySelectorAll(".Project.is-hidden").forEach(card => card.classList.remove("is-hidden"));
+  for(let i = 0; i < projectArray.length; i++){
+    projects.innerHTML += projectArray[i];
+  }
   showMoreButton.remove();
 }
 
-renderProjects();
 showMoreButton.addEventListener("click", loadMoreProj);
+
+
+
+
+
 
 buttons.forEach(button => {
     button.addEventListener('click', function() {

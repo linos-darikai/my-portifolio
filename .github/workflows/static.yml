@@ -6,10 +6,6 @@ on:
   push:
     branches: ["main"]
 
-  # Rebuild every 2 days so new repos and README changes on GitHub show up on the site
-  schedule:
-    - cron: "0 5 */2 * *"
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -35,14 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Build projects from GitHub
-        run: node scripts/build-projects.mjs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
