@@ -70,6 +70,12 @@ section {
     color: #8892b0;
     
 }
+.color-green{
+    color: #60F5D2;
+}
+.color-grey{
+    color: #ccd6f6;
+}
 .text-color-green{
     color: #60F5D2;
     margin-right: 5px; 
@@ -359,21 +365,29 @@ img{
     
     
 }
-.Project{
-    background-color: blue;
-    padding: 10px;
-    margin: 5px ;
-}
+/*Project page*/
 .fourth-page{
     height: 100vh;
-
+}
+.Project{
+    background-color: #112240;
+    padding: 10px;
+    margin: 5px ;
+    height: 350px;
+    width: 300px;
+    border-radius: 4px;
+}
+.project-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+.project-inner{
+    margin: 15px;
 }
 .projects{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    row-gap: 10px;
-    column-gap: 10px;
-    
+    display: flex;   
 
 }
 .fifth-page{
