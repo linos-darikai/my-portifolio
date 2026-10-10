@@ -271,11 +271,12 @@ img{
 .about{
     display: grid;
     width: 85%;
-    height: 100vh;
     grid-template-areas: 
     "top-header top-header"
     "pic text";
     grid-template-columns: 42% 58%;
+    grid-template-rows: 10% 90%;
+    column-gap: 50px;
     
 
 }
