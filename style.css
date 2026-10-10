@@ -452,7 +452,31 @@ img{
 }
 /*fifth page last and not least page*/
 .fifth-page{
+    height: 100vh;
 
+}
+.call-to-action{
+    font-family: "Monstreal";
+    font-size: 45px;
+    margin-top: 10px;
+}
+.action-text{
+    display: flex;
+    justify-content: center;
+}
+.action-paragraph{
+    text-align: center;
+}
+.button-end{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.footer-text{
+    font-family: "JMono";
+    font-size: 11px;
+    text-align: center;
 }
 
 
