@@ -507,9 +507,3 @@ img{
     font-stretch: 75%;
     font-style: normal;
 }
-
-
-@font-face {
-    font-family: "Popping";
-    src: url("resources/fonts/Poppins/Poppins-Light.ttf");
-}
